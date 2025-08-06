@@ -113,28 +113,6 @@ document.querySelectorAll(".fade-in").forEach((el) => {
   observer.observe(el);
 });
 
-// // Contact form submission
-// document.getElementById("contactForm").addEventListener("submit", function (e) {
-//   e.preventDefault();
-
-//   // Get form data
-//   const formData = new FormData(this);
-//   const name = formData.get("name");
-//   const email = formData.get("email");
-//   const message = formData.get("message");
-
-//   // Simple validation
-//   if (name && email && message) {
-//     // Simulate form submission
-//     alert(
-//       `Thank you ${name}! Your message has been sent successfully. I'll get back to you soon at ${email}.`
-//     );
-//     this.reset();
-//   } else {
-//     alert("Please fill in all fields.");
-//   }
-// });
-
 // Dynamic footer year
 document.getElementById("footeryear").textContent = new Date().getFullYear();
 
@@ -207,57 +185,3 @@ document
       behavior: "smooth",
     });
   });
-
-// Contact form submission
-// document.getElementById("contact-form").addEventListener("submit", function (e) {
-//   e.preventDefault();
-
-//   // Get values
-//   const name = document.getElementById("name").value.trim();
-//   const phone = document.getElementById("number").value.trim();
-//   const email = document.getElementById("email").value.trim();
-//   const message = document.getElementById("message").value.trim();
-
-//   // Simple validation
-//   if (!name || !phone || !email || !message) {
-//     alert("Please fill in all fields.");
-//     return;
-//   }
-
-//   // Prepare form data
-//   const formData = new FormData();
-//   formData.append("name", name);
-//   formData.append("phone", phone);
-//   formData.append("email", email);
-//   formData.append("message", message);
-//   formData.append("access_key", "33d44239-b74e-45c4-be8a-5c9f3feaab1d");
-
-//   // Disable submit button to prevent double submission
-//   const submitBtn = document.getElementById("submit");
-//   submitBtn.disabled = true;
-//   submitBtn.textContent = "Sending...";
-
-//   // Send to Web3Forms
-//   fetch("https://api.web3forms.com/submit", {
-//     method: "POST",
-//     body: formData,
-//   })
-//     .then((response) => response.json())
-//     .then((data) => {
-//       if (data.success) {
-//         alert("Thank you! Your message has been sent successfully.");
-//         document.getElementById("contact-form").reset();
-//         submitBtn.textContent = "Send Message";
-//       } else {
-//         alert("There was an error sending your message. Please try again.");
-//         submitBtn.textContent = "Send Message";
-//       }
-//       submitBtn.disabled = false;
-//     })
-//     .catch((error) => {
-//       console.error("Error:", error);
-//       alert("Something went wrong. Please try again later.");
-//       submitBtn.disabled = false;
-//       submitBtn.textContent = "Send Message";
-//     });
-// });
