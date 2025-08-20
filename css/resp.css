@@ -84,4 +84,16 @@
     .certifications-grid {
         grid-template-columns: 1fr;
     }
+
+    
+    .splash-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .profile-img {
+        width: 150px;
+        /* height: 150px; */
+        border-radius: 20px;
+    }
 }
+
