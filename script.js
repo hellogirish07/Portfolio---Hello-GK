@@ -185,3 +185,13 @@ document
       behavior: "smooth",
     });
   });
+
+
+// Splash screen functionality
+window.addEventListener('DOMContentLoaded', () => {
+    const splash = document.getElementById('splash-screen');
+    setTimeout(() => {
+        splash.classList.add('hide');
+        setTimeout(() => splash.style.display = 'none', 700);
+    }, 2700); // Show splash for ~2.7s (matches animation)
+});
