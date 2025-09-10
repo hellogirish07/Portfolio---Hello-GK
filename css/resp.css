@@ -95,5 +95,10 @@
         /* height: 150px; */
         border-radius: 20px;
     }
+
+    .about-text p {
+        text-align: left;
+    }
 }
+
 
