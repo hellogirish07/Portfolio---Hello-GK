@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Portfolio - Your Name</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/resp.css">
+</head>
+
+<body>
+    <div class="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="back()">Girish Suthar</div>
+            <ul id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">My Projects</h1>
+            <p class="hero-subtitle">Check out my projects! Some even work on the first try!</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="cta-btn cta-primary">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title fade-in">My Projects</h2>
+
+        <!-- 🔍 Search & Filter -->
+        <section id="search-filter">
+            <input type="text" id="search-bar" placeholder="Search Projects...">
+        </section>
+
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up" data-name="pdf Merger App">
+                <div class="project-image project-1"></div>
+                <div class="project-content">
+                    <h3>PDF Merger App</h3>
+                    <p>Combine multiple PDF files instantly in your browser. No uploads, no watermarks, and no
+                        registration
+                        required</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-pdf-merger.netlify.app/" class="cta-btn cta-secondary">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="background remover app">
+                <div class="project-image project-2"></div>
+                <div class="project-content">
+                    <h3>Background Remover APP</h3>
+                    <p>A free online image background remower app</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript + RemoveBG API</span>
+                    </div>
+                    <a href="https://girish18-bg-remover.netlify.app/" class="cta-btn cta-secondary">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="qr code genrater">
+                <div class="project-image project-3"></div>
+                <div class="project-content">
+                    <h3>QR Code Genrater</h3>
+                    <p>A QR Code Generator App where you can create your QR Code.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-qr-code.netlify.app/" class="cta-btn cta-secondary">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="tic tac toe">
+                <div class="project-image project-4"></div>
+                <div class="project-content">
+                    <h3>Tic Tac Toe</h3>
+                    <p>A fun tic-tac-toe game built with JavaScript.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-tic-tac-toe.netlify.app/" class="cta-btn cta-secondary">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="music app">
+                <div class="project-image project-5"></div>
+                <div class="project-content">
+                    <h3>BeatBoxify - A Music App</h3>
+                    <p>BeatBoxify, a simple music player application. BeatBoxify allows users to play audio files from
+                        their local device in a playlist format.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-beatboxify.netlify.app/" class="cta-btn cta-secondary">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="birthday reminder app">
+                <div class="project-image project-6"></div>
+                <div class="project-content">
+                    <h3>Birthday Reminder App</h3>
+                    <p>CA simple app which stores you importent birthdays</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-birthday-reminder-app.netlify.app/" class="cta-btn cta-secondary">View
+                        Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="food delivery app">
+                <div class="project-image project-7"></div>
+                <div class="project-content">
+                    <h3>Online food delivery App </h3>
+                    <p>Online food delivery app where you can order food from your favourite restaurant.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-biteblitz.netlify.app/" class="cta-btn cta-secondary">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="coding world">
+                <div class="project-image project-8"></div>
+                <div class="project-content">
+                    <h3>Coding World</h3>
+                    <p>A simple education landing page</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-coding-world.netlify.app/" class="cta-btn cta-secondary">View
+                        Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="dice cricket game">
+                <div class="project-image project-9"></div>
+                <div class="project-content">
+                    <h3>Dice Cricket Game</h3>
+                    <p>A Cricket game in which you play with Dice :)</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-dice-cricket.netlify.app/" class="cta-btn cta-secondary">View
+                        Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="digi x shop">
+                <div class="project-image project-10"></div>
+                <div class="project-content">
+                    <h3>Digi X Shop</h3>
+                    <p>A simple e-commerce landing page</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <a href="https://girish18-dxs.netlify.app/" class="cta-btn cta-secondary">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="note app">
+                <div class="project-image project-11"></div>
+                <div class="project-content">
+                    <h3>IdeaVault : A note app</h3>
+                    <p>A simple note app where you can store your ideas</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-ideavault.netlify.app/noteapp" class="cta-btn cta-secondary">View
+                        Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="redmi 12 5g">
+                <div class="project-image project-12"></div>
+                <div class="project-content">
+                    <h3>Redmi 12 5G</h3>
+                    <p>Simple Landing page for Redmi 12 5G Phone.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish-18-redmi-12-5g.netlify.app/#hero" class="cta-btn cta-secondary">View
+                        Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="note app">
+                <div class="project-image project-13"></div>
+                <div class="project-content">
+                    <h3>Note App</h3>
+                    <p>A simple note app where you can store your ideas</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-note-app.netlify.app/" class="cta-btn cta-secondary">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="love calculator">
+                <div class="project-image project-14"></div>
+                <div class="project-content">
+                    <h3>Love Calculator</h3>
+                    <p>Calculate your love percentage with your partner</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-love-calc.netlify.app/" class="cta-btn cta-secondary">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="tower of hanoi">
+                <div class="project-image project-15"></div>
+                <div class="project-content">
+                    <h3>Tower of Hanoi</h3>
+                    <p>Classic Tower of Hanoi game solution step guide built with JavaScript.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-toh.netlify.app/" class="cta-btn cta-secondary">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="number guessing game">
+                <div class="project-image project-16"></div>
+                <div class="project-content">
+                    <h3>Number Guessing Game</h3>
+                    <p>Test your luck with this interactive game.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish-number-guessing-game.netlify.app/" class="cta-btn cta-secondary">View
+                        Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="loss less vpn">
+                <div class="project-image project-17"></div>
+                <div class="project-content">
+                    <h3>Loss Less VPN</h3>
+                    <p>Secure Your Internet with Loss Less VPN. Fast, secure, and reliable VPN service for all your
+                        devices.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-vpn.netlify.app/" class="cta-btn cta-btn cta-secondary">View
+                        Project</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-name="weather app">
+                <div class="project-image project-18"></div>
+                <div class="project-content">
+                    <h3>Weather App</h3>
+                    <p>Get real-time weather updates for any location worldwide.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://girish18-weathe-app.netlify.app/" class="cta-btn cta-secondary">View
+                        Project</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="footeryear"></span> Girish Suthar. All rights reserved.</p>
+        <div class="backToTop">
+            <a href="#home">Back to Top ↑</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
