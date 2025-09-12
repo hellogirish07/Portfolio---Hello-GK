@@ -44,57 +44,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// // Gallery functionality
-// let currentSlide = 0;
-// const slides = document.querySelectorAll(".gallery-slide");
-// const totalSlides = slides.length;
-
-// // Create dots
-// const dotsContainer = document.getElementById("galleryDots");
-// for (let i = 0; i < totalSlides; i++) {
-//   const dot = document.createElement("div");
-//   dot.classList.add("gallery-dot");
-//   if (i === 0) dot.classList.add("active");
-//   dot.addEventListener("click", () => goToSlide(i));
-//   dotsContainer.appendChild(dot);
-// }
-
-// const dots = document.querySelectorAll(".gallery-dot");
-
-// function updateSlider() {
-//   const slider = document.getElementById("gallerySlider");
-//   slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-//   dots.forEach((dot, index) => {
-//     dot.classList.toggle("active", index === currentSlide);
-//   });
-// }
-
-// function changeSlide(direction) {
-//   currentSlide += direction;
-//   if (currentSlide < 0) currentSlide = totalSlides - 1;
-//   if (currentSlide >= totalSlides) currentSlide = 0;
-//   updateSlider();
-// }
-
-// function goToSlide(slideIndex) {
-//   currentSlide = slideIndex;
-//   updateSlider();
-// }
-
-// // Auto-slide every 5 seconds
-// let autoSlideInterval = setInterval(() => changeSlide(1), 5000);
-
-// // Pause auto-slide on hover
-// const galleryContainer = document.querySelector(".gallery-container");
-// galleryContainer.addEventListener("mouseenter", () => {
-//   clearInterval(autoSlideInterval);
-// });
-
-// galleryContainer.addEventListener("mouseleave", () => {
-//   autoSlideInterval = setInterval(() => changeSlide(1), 5000);
-// });
-
 // Scroll animations
 const observerOptions = {
   threshold: 0.1,
@@ -138,26 +87,26 @@ window.addEventListener("load", () => {
   const originalText = heroTitle.textContent;
 
   // Uncomment the line below to enable typing effect
-  // typeWriter(heroTitle, originalText, 150);
+  typeWriter(heroTitle, originalText, 150);
 });
 
 // Smooth reveal animations for skill items
-const skillItems = document.querySelectorAll(".skill-item");
-skillItems.forEach((item, index) => {
-  item.style.animationDelay = `${index * 0.1}s`;
-});
+// const skillItems = document.querySelectorAll(".skill-item");
+// skillItems.forEach((item, index) => {
+//   item.style.animationDelay = `${index * 0.1}s`;
+// });
 
 // Project cards hover effect
-const projectCards = document.querySelectorAll(".project-card");
-projectCards.forEach((card) => {
-  card.addEventListener("mouseenter", () => {
-    card.style.transform = "translateY(-15px) scale(1.02)";
-  });
+// const projectCards = document.querySelectorAll(".project-card");
+// projectCards.forEach((card) => {
+//   card.addEventListener("mouseenter", () => {
+//     card.style.transform = "translateY(-15px) scale(1.02)";
+//   });
 
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "translateY(0) scale(1)";
-  });
-});
+//   card.addEventListener("mouseleave", () => {
+//     card.style.transform = "translateY(0) scale(1)";
+//   });
+// });
 
 // Add loading animation
 window.addEventListener("load", () => {
@@ -186,12 +135,35 @@ document
     });
   });
 
-
 // Splash screen functionality
-window.addEventListener('DOMContentLoaded', () => {
-    const splash = document.getElementById('splash-screen');
-    setTimeout(() => {
-        splash.classList.add('hide');
-        setTimeout(() => splash.style.display = 'none', 700);
-    }, 2700); // Show splash for ~2.7s (matches animation)
+window.addEventListener("DOMContentLoaded", () => {
+  const splash = document.getElementById("splash-screen");
+  setTimeout(() => {
+    splash.classList.add("hide");
+    setTimeout(() => (splash.style.display = "none"), 700);
+  }, 2700);
+});
+
+// AOS initialization
+AOS.init({
+  duration: 800, // Animation duration in milliseconds
+  easing: "ease-in-out", // Easing function for the animation
+  once: true, // Whether animation should happen only once - while scrolling down
+});
+
+function back() {
+  window.location.href = "index.html";
+}
+
+// Search functionality for projects
+const searchBar = document.getElementById("search-bar");
+searchBar.addEventListener("input", function () {
+    let query = searchBar.value.toLowerCase();
+    let projects = document.querySelectorAll(".project-card");
+
+    projects.forEach((project) => {
+        let keywords = project.dataset.name.toLowerCase().split(", ");
+        let match = keywords.some((keyword) => keyword.includes(query));
+        project.style.display = match ? "block" : "none";
+    });
 });
