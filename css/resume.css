@@ -1,0 +1,197 @@
+/* Resume Section Styles */
+.resume-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.resume-download {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.resume-download a {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--gradient-1);
+    color: white;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.resume-section {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.3s ease;
+}
+
+.resume-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.resume-title {
+    color: var(--accent);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.resume-title i {
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+}
+
+.resume-item {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.resume-item::before {
+    content: '';
+    position: absolute;
+    left: 60px;
+    top: 50px;
+    width: 2px;
+    height: calc(100% - 20px);
+    background: var(--glass-border);
+}
+
+.resume-item:last-child::before {
+    display: none;
+}
+
+.resume-year {
+    background: var(--gradient-2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    height: fit-content;
+    min-width: 120px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);
+}
+
+.resume-details h4 {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.resume-details h5 {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.resume-details p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.resume-achievements {
+    list-style: none;
+    padding: 0;
+}
+
+.resume-achievements li {
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.resume-achievements li::before {
+    content: '▶';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+}
+
+/* Certifications */
+.certifications-section {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.cert-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cert-item:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--accent);
+}
+
+.cert-item i {
+    font-size: 2.5rem;
+    background: var(--gradient-3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cert-item h4 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.cert-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.cert-year {
+    background: var(--accent);
+    color: var(--primary-bg);
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}

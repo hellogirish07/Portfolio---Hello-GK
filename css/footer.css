@@ -1,0 +1,21 @@
+footer {
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 9;
+}
+
+.backToTop {
+    margin-top: 10px;
+}
+
+.backToTop a {
+    text-decoration: none;
+    color: #00ff87;
+    font-weight: bold;
+}

@@ -1,0 +1,141 @@
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.project-view {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.project-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-15px);
+    border: 2px solid var(--accent);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    height: 200px;
+    background: var(--gradient-1);
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-image::before {
+    opacity: 1;
+}
+
+.project-content {
+    padding: 30px;
+}
+
+.project-content h3 {
+    color: var(--accent);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.project-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background: var(--accent);
+    color: var(--primary-bg);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-1 {
+    background-image: url('/projects/pdf.png');
+}
+.project-2 {
+    background-image: url('/projects/BG-remover.png');
+}
+.project-3 {
+    background-image: url('/projects/QR\ Code.png');
+}
+.project-4 {
+    background-image: url('/projects/tic-tac-toe.png');
+}
+.project-5 {
+    background-image: url('/projects/beatboxify.png');
+}
+.project-6 {
+    background-image: url('/projects/birthday-reminder.png');
+}
+.project-7 {
+    background-image: url('/projects/BiteBlitz.png');
+}
+.project-8 {
+    background-image: url('/projects/coding-world.png');
+}
+.project-9 {
+    background-image: url('/projects/DC.png');
+}
+.project-10 {
+    background-image: url('/projects/dxs.png');
+}
+.project-11 {
+    background-image: url('/projects/ideavault.png');
+}
+.project-12 {
+    background-image: url('/projects/redmi-12.png');
+}
+.project-13 {
+    background-image: url('/projects/notes.png');    
+}
+.project-14 {
+    background-image: url('/projects/love-cal-c.png');
+}
+.project-15 {
+    background-image: url('/projects/toh.png');
+}
+.project-16 {
+    background-image: url('/projects/number-guessing-game.png');
+}
+.project-17 {
+    background-image: url('/projects/vpn.png');
+}
+.project-18 {
+    background-image: url('/projects/weather.png');
+}
