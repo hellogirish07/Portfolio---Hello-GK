@@ -28,7 +28,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
-    animation: gradientShift 3s ease infinite;
+    /* animation: gradientShift 3s ease infinite; */
 }
 
 @keyframes gradientShift {
