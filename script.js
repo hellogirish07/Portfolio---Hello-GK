@@ -135,15 +135,6 @@ document
     });
   });
 
-// Splash screen functionality
-window.addEventListener("DOMContentLoaded", () => {
-  const splash = document.getElementById("splash-screen");
-  setTimeout(() => {
-    splash.classList.add("hide");
-    setTimeout(() => (splash.style.display = "none"), 700);
-  }, 2700);
-});
-
 // AOS initialization
 AOS.init({
   duration: 800, // Animation duration in milliseconds
@@ -156,14 +147,46 @@ function back() {
 }
 
 // Search functionality for projects
+// const searchBar = document.getElementById("search-bar");
+// searchBar.addEventListener("input", function () {
+//     let query = searchBar.value.toLowerCase();
+//     let projects = document.querySelectorAll(".project-card");
+
+//     projects.forEach((project) => {
+//         let keywords = project.dataset.name.toLowerCase().split(", ");
+//         let match = keywords.some((keyword) => keyword.includes(query));
+//         project.style.display = match ? "block" : "none";
+//     });
+// });
+
 const searchBar = document.getElementById("search-bar");
 searchBar.addEventListener("input", function () {
-    let query = searchBar.value.toLowerCase();
-    let projects = document.querySelectorAll(".project-card");
+  let query = searchBar.value.toLowerCase();
 
-    projects.forEach((project) => {
-        let keywords = project.dataset.name.toLowerCase().split(", ");
-        let match = keywords.some((keyword) => keyword.includes(query));
-        project.style.display = match ? "block" : "none";
-    });
+  const filteredProjects = projects.filter((project) =>
+    project.keywords.toLowerCase().includes(query)
+  );
+
+  renderProjects(filteredProjects);
+});
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Remove active class
+    filterButtons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    const filterValue = button.dataset.filter;
+
+    if (filterValue === "all") {
+      renderProjects(projects);
+    } else {
+      const filtered = projects.filter(
+        (project) => project.category === filterValue
+      );
+      renderProjects(filtered);
+    }
+  });
 });
