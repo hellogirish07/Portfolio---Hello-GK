@@ -17,9 +17,11 @@ Welcome to the personal portfolio website of Girish Suthar. This site showcases 
 3. All assets (CSS, images, JS) are included in the respective folders.
 
 ## Folder Structure
-```
-index.html
+```i
+ndex.html
+all-projects.html
 script.js
+project.js
 css/
   about.css
   contact.css
@@ -59,3 +61,4 @@ This project is open source and free to use for personal portfolio purposes.
 ---
 
 **Created by Girish Suthar**
+
