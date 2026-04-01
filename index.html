@@ -4,19 +4,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello GK</title>
 
-  <!-- favicon -->
-  <link rel="icon" type="image/png" href="icon.ico">
+  <!-- Primary SEO -->
+  <title>GK | Web Developer Portfolio</title>
+  <meta name="description"
+    content="GK's portfolio showcasing web development projects, skills, and experience in HTML, CSS, JavaScript, and modern web technologies.">
+  <meta name="keywords"
+    content="GK, Girish Suthar, web developer, portfolio, HTML, CSS, JavaScript, frontend developer, projects ">
+  <meta name="author" content="Girish Suthar">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.ico">
+
+  <!-- Open Graph (Facebook, LinkedIn) -->
+  <meta property="og:title" content="GK | Web Developer Portfolio">
+  <meta property="og:description" content="Explore GK's projects, skills, and web development journey.">
+  <meta property="og:image" content="https://hello-gk-18.netlify.app/img/me.jpg">
+  <meta property="og:url" content="https://hello-gk-18.netlify.app/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GK | Web Developer Portfolio">
+  <meta name="twitter:description" content="Explore GK's web development projects and skills.">
+  <meta name="twitter:image" content="https://hello-gk-18.netlify.app/img/me.jpg">
+
+  <!-- Theme color (mobile browser UI) -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Fonts (optimized) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/hero.css">
@@ -65,11 +94,11 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" daa-aos="fade-up">
+  <section id="about" data-aos="fade-up">
     <h2 class="section-title">About Me</h2>
     <div class="about-content">
       <div class="about-image" data-aos="fade-up">
-        <img src="/img/pic (2).jpg" alt="Your Photo">
+        <img src="/img/me.jpg" alt="GK's Photo">
       </div>
       <div class="about-text" data-aos="fade-up">
         <h3>Hi, I'm GIRISH SUTHAR!</h3>
@@ -366,6 +395,15 @@
       <a href="#home">Back to Top ↑</a>
     </div>
   </footer>
+
+
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
 
   <script src="script.js"></script>
 </body>
